@@ -22,12 +22,14 @@
 #define COMMAND_DOWN   0x08
 
 // ESP32 GPIO pins for H-Bridge (adjust these to your specific ESP32 board and wiring)
-#define enA 25 // Example GPIO for ESP32
-#define enB 26 // Example GPIO for ESP32
-#define IN1 27 // Example GPIO for ESP32
-#define IN2 14 // Example GPIO for ESP32
-#define IN3 12 // Example GPIO for ESP32
-#define IN4 13 // Example GPIO for ESP32
+#define enA 25 // Example GPIO for ESP32, uno --> 8, hitam
+#define enB 26 // Example GPIO for ESP32, uno --> 9, kunig
+#define IN1 27 // Example GPIO for ESP32, uno --> 10, abu
+#define IN2 14 // Example GPIO for ESP32, uno --> 11, oren
+#define IN3 12 // Example GPIO for ESP32, uno --> 12, putih
+#define IN4 13 // Example GPIO for ESP32, uno --> 13, ungu
+
+
 
 // For LED_BUILTIN, ESP32 boards vary. Common is GPIO 2.
 // If you use LED_BUILTIN, you might need to define it explicitly, e.g.:
@@ -49,7 +51,7 @@ void setup() {
   // Alternatively, adjust thresholds for ESP32's default 12-bit resolution (0-4095).
   analogReadResolution(10); 
 
-  pinMode(LED_BUILTIN, OUTPUT); // Note: LED_BUILTIN is set up but not used in the loop.
+  // pinMode(LED_BUILTIN, OUTPUT); // Note: LED_BUILTIN is set up but not used in the loop.
   pinMode(IN1, OUTPUT);
   pinMode(IN2, OUTPUT);
   pinMode(IN3, OUTPUT);
